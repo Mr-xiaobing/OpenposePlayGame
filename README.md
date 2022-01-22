@@ -1,5 +1,7 @@
 #              	4399拳皇wing模拟器
-​	这个项目可以通过姿态识别来识别动作操作游戏里面的人物使用对应的招式
+​	这个项目可以通过姿态识别来识别动作操作游戏里面的人物使用对应的招式：
+
+​	![效果](https://github.com/Mr-xiaobing/OpenposePlayGame/blob/master/image/%E6%B0%94%E5%8A%9F%E6%B3%A2.png)
 
 ​	项目的演示可以查看：https://www.bilibili.com/video/BV1vq4y1c7S7/
 
@@ -9,7 +11,7 @@
 
 ​		opencv ：https://opencv.org/（官网）
 
-​		openpose（姿态识别）：https://github.com/CMU-Perceptual-Computing-Lab/openpose （github）
+​		openpose（姿态识别）：https://github.com/CMU-Perceptual-Computing-Lab/openpose （github）（大家也可以使用别的姿态识别模型）
 
 ​		pyautogui（快捷键进行桌面切换）：https://github.com/asweigart/pyautogui
 
@@ -17,7 +19,7 @@
 
 ​		**我这边有一个编译好的openpose 我不知道能不能用，大家可以下载试试：**
 
-​		大家也可以自己尝试编译。（大家可以使用别的姿态识别模式）openpose编译的视频教程（**记得在cmake步骤的时候勾选python,编译出python的第三方库**）：
+​		大家也可以自己尝试编译。openpose编译的视频教程（**记得在cmake步骤的时候勾选python,编译出python的第三方库**）：
 
 ​		https://www.bilibili.com/video/BV1jQ4y1k76m?p=2
 
@@ -35,11 +37,7 @@
 
 ​	人体关节点图：
 
-​	
-
-
-
-
+![人体关节点图](https://github.com/Mr-xiaobing/OpenposePlayGame/blob/master/image/%E4%BA%BA%E4%BD%93%E5%90%84%E4%B8%AA%E8%8A%82%E7%82%B9.jpg)
 
 ```
 print( motion.operation(datum.poseKeypoints[0]))
