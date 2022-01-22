@@ -17,7 +17,11 @@
 
 ​		python版本 3.8
 
-​		**我这边有一个编译好的openpose 我不知道能不能用，大家可以下载试试：**
+​		**我这边有一个编译好的openpose 我不知道能不能用（x64)，大家可以下载试试（有点大2.5G）：**
+
+​		链接：https://pan.baidu.com/s/1TcyHnubRDE3EC5sbJ2hnpA 
+
+​		提取码：xbin
 
 ​		大家也可以自己尝试编译。openpose编译的视频教程（**记得在cmake步骤的时候勾选python,编译出python的第三方库**）：
 
