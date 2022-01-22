@@ -9,7 +9,7 @@
 
 ## 这个项目使用到的第三库和姿态识别模型有（前期准备）：
 
-​		opencv ：https://opencv.org/（官网）
+​		opencv ：https://opencv.org/（官网） 
 
 ​		openpose（动作识别识别）：https://github.com/CMU-Perceptual-Computing-Lab/openpose （github）（大家也可以使用别的姿态识别模型）
 
