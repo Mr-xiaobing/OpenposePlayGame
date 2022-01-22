@@ -11,9 +11,9 @@
 
 ​		opencv ：https://opencv.org/（官网）
 
-​		openpose（姿态识别）：https://github.com/CMU-Perceptual-Computing-Lab/openpose （github）（大家也可以使用别的姿态识别模型）
+​		openpose（动作识别识别）：https://github.com/CMU-Perceptual-Computing-Lab/openpose （github）（大家也可以使用别的姿态识别模型）
 
-​		pyautogui（快捷键进行桌面切换）：https://github.com/asweigart/pyautogui
+​		pyautogui（释放招式）：https://github.com/asweigart/pyautogui
 
 ​		python版本 3.8
 
