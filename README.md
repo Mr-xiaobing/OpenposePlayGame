@@ -9,13 +9,9 @@
 
 ## 这个项目使用到的第三库和姿态识别模型有（前期准备）：
 
-​		opencv ：https://opencv.org/（官网） 
+​		opencv ：https://opencv.org/（官网） (pip install opencv-python)
 
 ​		openpose（动作识别识别）：https://github.com/CMU-Perceptual-Computing-Lab/openpose （github）（大家也可以使用别的姿态识别模型）
-
-​		pyautogui（释放招式）：https://github.com/asweigart/pyautogui
-
-​		python版本 3.8
 
 ​		**我这边有一个编译好的openpose 我不知道能不能用（x64)，大家可以下载试试（有点大2.5G）：**
 
@@ -23,9 +19,15 @@
 
 ​		提取码：xbin
 
-​		大家也可以自己尝试编译。openpose编译的视频教程（**记得在cmake步骤的时候勾选python,编译出python的第三方库**）：
+​		用不了的话，大家可以自己尝试编译。openpose编译的视频教程（**记得在cmake步骤的时候勾选python,编译出python的第三方库**）：
 
 ​		https://www.bilibili.com/video/BV1jQ4y1k76m?p=2
+
+​		pyautogui（释放招式）：https://github.com/asweigart/pyautogui （pip install pyautogui)
+
+​		python版本 3.8 (python 3.9 好像跑不起来。)
+
+​		
 
 
 
