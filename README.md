@@ -17,7 +17,7 @@
 
 ​		**我这边有一个编译好的openpose 我不知道能不能用，大家可以下载试试：**
 
-​		大家也可以自己尝试编译。openpose编译的视频教程（**记得在cmake步骤的时候勾选python,编译出python的第三方库**）：
+​		大家也可以自己尝试编译。（大家可以使用别的姿态识别模式）openpose编译的视频教程（**记得在cmake步骤的时候勾选python,编译出python的第三方库**）：
 
 ​		https://www.bilibili.com/video/BV1jQ4y1k76m?p=2
 
