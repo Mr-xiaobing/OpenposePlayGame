@@ -1,5 +1,5 @@
 #              	4399拳皇wing模拟器
-​	这个项目可以通过姿态识别来识别动作操作游戏里面的人物使用对应的招式：
+##    这个项目可以通过姿态识别来识别动作操作游戏里面的人物使用对应的招式
 
 ​	![效果](https://github.com/Mr-xiaobing/OpenposePlayGame/blob/master/image/%E6%B0%94%E5%8A%9F%E6%B3%A2.png)
 

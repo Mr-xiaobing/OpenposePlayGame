@@ -4,22 +4,23 @@ import sys
 import cv2
 import action_long
 
+
+# 代码比较简单 基本是按照  main->action->skill来执行的。 如果有出错的地方大家可以修改提交上来我merge进去。
 if __name__ == '__main__':
     try:
         # 导入 openpose 库
-        # 这里改为你的  openpose放置的地址
+        # 这里改为你电脑的  openpose放置的地址
         path = "C:\\Users\\Administrator\\Desktop\\openpose-master\\build\\python\\openpose\\Release"
-        # 这里改为你的  openpose放置的地址
+        # 这里改为你电脑的  openpose放置的地址
         bin_path = "C:\\Users\\Administrator\\Desktop\\openpose-master\\build\\bin"
         sys.path.append(path)
-        # 追加到系统环境变量
+        # 追加到系统环境变量  这里改为你电脑的openpose放置的地址
         os.environ['Path'] =os.environ['Path']+";"+"C:\\Users\\Administrator\\Desktop\\openpose-master\\build\\x64\\Release;"+bin_path+";"+path+";"
         print(os.environ["Path"])
         import pyopenpose as op
         # Flags
         parser = argparse.ArgumentParser()
         args = parser.parse_known_args()
-        # Custom Params (refer to include/openpose/flags.hpp for more parameters)
         params = dict()
         # 需要加载模型
         # 这里改为你openpose放置的地址
@@ -55,13 +56,15 @@ if __name__ == '__main__':
             # 模型识别识别操作
             opWrapper.emplaceAndPop(op.VectorDatum([datum]))
             if datum.poseKeypoints is not None:
-                # 生成的结果  datum.poseKeypoints 这是一个数组.详细数组的解释请查看 README 这个打印可以去掉
+                # 生成的结果  datum.poseKeypoints 这是一个数组.详细数组的解释请查看 README （这个打印可以去掉）
                 # openpose可以检测多人。检测到的人数(可以开发多人对打模式。)
                 personNum = len(datum.poseKeypoints)
                 for i in range(personNum):
+
+                    # 动作识别
                     action_long.operation(datum.poseKeypoints[i])
-                    # 如果有人观看我的电脑，并且屏幕在游戏页面的话  则切换到工作页面
-            #  在你的电脑进行展示
+
+            #  在你的电脑进行展示 （性能不够的话，可以关闭这个展示）
             image_new = cv2.flip(datum.cvOutputData,1)
             cv2.imshow("真人拳皇", image_new)
             # 视频的录制,生成一个 (out = cv2.VideoWriter("output.avi", fourcc, 8, size))  output.avi的视频

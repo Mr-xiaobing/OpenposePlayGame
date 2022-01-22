@@ -3,7 +3,7 @@ import math
 import skill_long
 
 
-# 动作
+# 动作 points是人体的关节点，可以看README里面图和解释
 def operation(points):
     # 鼻子
     nose = points[0]
@@ -35,7 +35,7 @@ def operation(points):
     ankle_right = points[11]
     # 左脚踝
     ankle_left = points[14]
-    # 曝气 双手交叉在胸前
+    # 动作设计的时候注意这里的顺序（这个很重要）
 
     # 翻滚 弯背
     if roll_left(palm_right, palm_left, knee_right, knee_left):
@@ -44,22 +44,22 @@ def operation(points):
     if unparalleled(palm_left, elbow_left, palm_right, elbow_right, shoulder_left, shoulder_right, jj, core):
         return
 
-    # 旋风腿 踢腿加直拳 （左右方向）
+    # 旋风腿 踢腿加直拳 （左右方向）同手同脚挥出踢出
     if whirlwind_leg_left(palm_left, elbow_left, shoulder_left, hip_left, knee_left,elbow_right,hip_right,knee_right, ankle_left,ankle_right):
         return
 
-    # 右边旋风腿
+    # 右边旋风腿 同手同脚挥出踢出
     if whirlwind_leg_right(palm_right, elbow_right, shoulder_right, hip_right, knee_right, hip_left, knee_left, elbow_left, ankle_right,ankle_left):
         return
 
-    # 冲击波 推波
+    # 冲击波 推波  龟派气功波的招式
     if qi_gong_right(core, elbow_left, elbow_right):
         return
-
+    # 龟派气功波的招式
     if qi_gong_left(core, elbow_left, elbow_right):
         return
 
-    # 技能升龙拳 高举双手
+    # 技能旋风腿 高举双手（消耗气的旋风腿）
     if real_sheng_long_boxing(nose, palm_left, palm_right):
         return
 
@@ -70,11 +70,11 @@ def operation(points):
     if sheng_long_boxing_right(nose, palm_right):
         return
 
-    # 右边移动 格挡
+    # 右边移动   左手格挡
     if move_right(palm_left, elbow_left, shoulder_left,core):
         return
-    #
-    # # 左边移动 格挡
+
+    # 左边移动 右手格挡
     if move_left(palm_right, elbow_right, shoulder_right,core):
         return
 
@@ -108,7 +108,7 @@ def qi_gong_left(core, elbow_left, elbow_right):
     return False
 
 
-# 升龙拳 左边
+# 升龙拳 左边  判断方式（左手手腕高于眼睛）  后面的动作设计也基本是这样靠着数学计算，用角度和位置来判断的。
 def sheng_long_boxing_left(nose, palm_left):
     if nose[2] > 0.1 and palm_left[2] > 0.1:
         if palm_left[1] < nose[1]:
@@ -117,7 +117,7 @@ def sheng_long_boxing_left(nose, palm_left):
     return False
 
 
-# 升龙拳 右边
+# 升龙拳 右边 判断方式（右手手腕高于眼睛） 后面的动作设计也基本是这样靠着数学计算，用角度和位置来判断的。
 def sheng_long_boxing_right(nose, palm_right):
     if nose[2] > 0.1 and palm_right[2] > 0.1:
         if palm_right[1] < nose[1]:
@@ -126,7 +126,7 @@ def sheng_long_boxing_right(nose, palm_right):
     return False
 
 
-# 大招旋风拳
+# 大招旋风腿 （双手高于眼睛）
 def real_sheng_long_boxing(nose,palm_left,palm_right):
     if nose[2] > 0.1 and palm_right[2] > 0.1 and palm_left[2] > 0.1:
         if palm_right[1] < nose[1] and palm_left[1] < nose[1]:
